@@ -10,7 +10,7 @@ describe('hhttpclient.js', function(){
       hhttp.get('test.com').then(
         function(ok){
           assert.equal(200, ok.statusCode)
-          console.log('body: ' + JSON.stringify(ok.body))
+          console.log('body: ' + JSON.stringify(ok))
           done();
         })
     })
