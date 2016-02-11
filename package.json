@@ -2,8 +2,14 @@
   "scripts": {
     "test": "mocha tests --recursive"
   },
+  "engines": {
+    "node": ">= 4"
+  },
   "dependencies": {
-    "mocha": "^2.4.5",
     "promise": "^7.1.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5"
   }
+
 }
