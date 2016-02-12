@@ -1,8 +1,7 @@
 {
   "scripts": {
     "test": "mocha tests --recursive",
-    "cover": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec tests --recursive --grep @e2e --invert"
-    
+    "cover": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec tests --recursive"
   },
   "engines": {
     "node": ">= 4"
@@ -11,7 +10,8 @@
     "promise": "^7.1.1"
   },
   "devDependencies": {
-    "mocha": "^2.4.5",
-    "istanbul": "^0.4.2"
+    "codeclimate-test-reporter": "^0.3.1",
+    "istanbul": "^0.4.2",
+    "mocha": "^2.4.5"
   }
 }
