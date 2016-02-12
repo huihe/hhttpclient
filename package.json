@@ -1,6 +1,8 @@
 {
   "scripts": {
-    "test": "mocha tests --recursive"
+    "test": "mocha tests --recursive",
+    "cover": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec tests --recursive --grep @e2e --invert"
+    
   },
   "engines": {
     "node": ">= 4"
@@ -9,7 +11,7 @@
     "promise": "^7.1.1"
   },
   "devDependencies": {
-    "mocha": "^2.4.5"
+    "mocha": "^2.4.5",
+    "istanbul": "^0.4.2"
   }
-
 }
