@@ -34,6 +34,13 @@ describe('hhttpclient.js', function(){
         })
     })
 
+    it('should return error when error', function(done){
+      hhttp.get('http://dummy1111.com/hello').then(null, function (error){
+          console.log(error)
+          done()
+        })
+    })
+
   })
 
   describe('post', function(){
