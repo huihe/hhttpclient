@@ -1,8 +1,7 @@
 {
   "scripts": {
     "test": "mocha tests --recursive",
-    "cover": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec tests --recursive",
-    "report": "./node_modules/codeclimate-test-reporter/bin/codeclimate.js < ./coverage/lcov.info"
+    "cover": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec tests --recursive"
   },
   "engines": {
     "node": ">= 4"
