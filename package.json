@@ -1,17 +1,39 @@
 {
   "scripts": {
-    "test": "mocha tests --recursive",
-    "cover": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec tests --recursive"
+    "test_old": "mocha tests --recursive && npm run-script cover",
+    "test": "npm run-script cover",
+    "cover": "npm run-script analyze-coverage && npm run-script check-coverage",
+    "analyze-coverage": "istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec tests --recursive",
+    "check-coverage": "istanbul check-coverage --statements 80"
   },
   "engines": {
     "node": ">= 4"
   },
   "dependencies": {
+    "express": "^4.13.4",
     "promise": "^7.1.1"
   },
   "devDependencies": {
     "codeclimate-test-reporter": "^0.3.1",
     "istanbul": "^0.4.2",
-    "mocha": "^2.4.5"
-  }
+    "mocha": "^2.4.5",
+    "nodemon": "^1.9.0"
+  },
+  "name": "hhttpclient",
+  "description": "[![Build Status](https://travis-ci.org/huihe/hhttpclient.svg?branch=master)](https://travis-ci.org/huihe/hhttpclient)",
+  "version": "1.0.0",
+  "main": "app.js",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huihe/hhttpclient.git"
+  },
+  "author": "Hui He",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huihe/hhttpclient/issues"
+  },
+  "homepage": "https://github.com/huihe/hhttpclient#readme"
 }
