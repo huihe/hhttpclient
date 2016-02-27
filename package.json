@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "test_old": "mocha tests --recursive && npm run-script cover",
+    "test_old": "mocha tests --recursive",
     "test": "npm run-script cover",
     "cover": "npm run-script analyze-coverage && npm run-script check-coverage",
     "analyze-coverage": "istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec tests --recursive",
@@ -21,7 +21,7 @@
   },
   "name": "hhttpclient",
   "description": "[![Build Status](https://travis-ci.org/huihe/hhttpclient.svg?branch=master)](https://travis-ci.org/huihe/hhttpclient)",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "app.js",
   "directories": {
     "test": "tests"
